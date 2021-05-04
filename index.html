@@ -9,9 +9,10 @@
     var context = cast.framework.CastReceiverContext.getInstance();
     const playerManager = context.getPlayerManager();
     playerManager.setMessageInterceptor(cast.framework.messages.MessageType.LOAD, loadRequestData => {
-        loadRequestData.media.hlsSegmentFormat = cast.framework.messages.HlsSegmentFormat.FMP4;
-        loadRequestData.media.hlsVideoSegmentFormat = cast.framework.messages.HlsVideoSegmentFormat.FMP4;
-        return loadRequestData;
+      console.log(loadRequestData);
+      /* loadRequestData.media.hlsSegmentFormat = cast.framework.messages.HlsSegmentFormat.FMP4;
+      loadRequestData.media.hlsVideoSegmentFormat = cast.framework.messages.HlsVideoSegmentFormat.FMP4;
+       */return loadRequestData;
     });
     context.start();
   </script>
